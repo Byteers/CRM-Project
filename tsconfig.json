@@ -14,7 +14,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./", // This must be set to enable path mapping
+    "paths": {
+      "@/*": ["src/*"] // This maps all imports starting with '@/' to the 'src' directory
+    }
   },
   "include": ["src", "vite.config.ts"],
   "references": [
